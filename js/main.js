@@ -441,23 +441,14 @@ switch (page_name) {
     case "about":
         curr_page[1] = true;
         break;
-	case "members":
+	case "faq":
 		curr_page[2] = true;
 		break;
-    case "programs":
+    case "schedule":
         curr_page[3] = true;
         break;
-    case "calendar":
+    case "sponsors":
         curr_page[4] = true;
-        break;
-    case "resources":
-        curr_page[5] = true;
-        break;
-    case "hackathon":
-        curr_page[6] = true;
-        break;
-    case "contact":
-        curr_page[7] = true;
         break;
 }
 
@@ -471,7 +462,7 @@ function check_page(number) {
 output = '';
 output += `
 <div class="container">
-          <a class="navbar-brand" href="index.html"><img src="images/wics-logo-transp.png" style="width: 40%"></a>
+          <a class="navbar-brand" href="index.html"><img src="images/wics-logo-transp.png" style="width: 20%"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
           </button>
@@ -480,12 +471,9 @@ output += `
             <ul class="navbar-nav ml-auto">
               <li class="nav-item ${check_page(0)}"><a href="index.html" class="nav-link">Home</a></li>
               <li class="nav-item ${check_page(1)}"><a href="about.html" class="nav-link">About</a></li>
-			  <li class="nav-item ${check_page(2)}"><a href="members.html" class="nav-link">Members</a></li>
-              <li class="nav-item ${check_page(3)}"><a href="programs.html" class="nav-link">Programs</a></li>
-              <li class="nav-item ${check_page(4)}"><a href="calendar.html" class="nav-link">Calendar</a></li>
-              <li class="nav-item ${check_page(5)}"><a href="resources.html" class="nav-link">Resources</a></li>
-              <li class="nav-item ${check_page(6)}"><a href="hackathon.html" class="nav-link">Hackathon</a></li>
-              <li class="nav-item ${check_page(7)}"><a href="contact.html" class="nav-link">Contact</a></li>
+			  <li class="nav-item ${check_page(2)}"><a href="members.html" class="nav-link">FAQ</a></li>
+              <li class="nav-item ${check_page(3)}"><a href="programs.html" class="nav-link">Schedule</a></li>
+              <li class="nav-item ${check_page(4)}"><a href="calendar.html" class="nav-link">Sponsors</a></li>
             </ul>
           </div>
         </div>

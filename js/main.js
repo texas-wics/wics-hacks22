@@ -431,7 +431,7 @@ document.querySelector('.ftco-footer').innerHTML = output
 //load header
 let page_name = document.getElementById("ftco-navbar").textContent.replace(/\s+/g, '');
 var curr_page = []
-for (var i = 0; i < 7; i++) {
+for (var i = 0; i < 5; i++) {
     curr_page.push(false)
 }
 switch (page_name) {
@@ -459,23 +459,35 @@ function check_page(number) {
     return ""
 }
 
-output = '';
-output += `
-<div class="container">
-          <a class="navbar-brand" href="index.html"><img src="images/wics-logo-transp.png" style="width: 20%"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-          </button>
+// var navContainer = document.getElementById("ftco-nav");
+// var links = navContainer.getElementsByClassName("nav-item");
 
-          <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item ${check_page(0)}"><a href="index.html" class="nav-link">Home</a></li>
-              <li class="nav-item ${check_page(1)}"><a href="about.html" class="nav-link">About</a></li>
-			  <li class="nav-item ${check_page(2)}"><a href="members.html" class="nav-link">FAQ</a></li>
-              <li class="nav-item ${check_page(3)}"><a href="programs.html" class="nav-link">Schedule</a></li>
-              <li class="nav-item ${check_page(4)}"><a href="calendar.html" class="nav-link">Sponsors</a></li>
-            </ul>
-          </div>
-        </div>
-`
-document.querySelector('.ftco_navbar').innerHTML = output
+// // Loop through the buttons and add the active class to the current/clicked button
+// for (var i = 0; i < links.length; i++) {
+//   links[i].addEventListener("click", function() {
+//     var current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
+
+output = '';
+// output += `
+// <div class="container">
+//           <a class="navbar-brand" href="https://www.cs.utexas.edu/~wics/"><img src="images/wics-logo-transp.png" style="width: 20%"></a>
+//           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+//             <span class="oi oi-menu"></span> Menu
+//           </button>
+
+//           <div class="collapse navbar-collapse" id="ftco-nav">
+//             <ul class="navbar-nav ml-auto">
+//               <li class="nav-item ${check_page(0)}"><a href="index.html#hack-home" class="nav-link">Home</a></li>
+//               <li class="nav-item ${check_page(1)}"><a href="index.html#hack-about" class="nav-link">About</a></li>
+// 			  <li class="nav-item ${check_page(2)}"><a href="index.html#hack-faq" class="nav-link">FAQ</a></li>
+//               <li class="nav-item ${check_page(3)}"><a href="index.html#hack-schedule" class="nav-link">Schedule</a></li>
+//               <li class="nav-item ${check_page(4)}"><a href="index.html#hack-sponsors" class="nav-link">Sponsors</a></li>
+//             </ul>
+//           </div>
+//         </div>
+// `
+// document.querySelector('.ftco_navbar').innerHTML = output
